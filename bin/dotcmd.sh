@@ -25,11 +25,12 @@ log_ok() {
 }
 
 df_usage() {
-    echo "$0 [add FILE|restore FILE|install [FILE|all]]" >&2
+    echo "$0 [add FILE|restore FILE|install [FILE|all]|git CMD]" >&2
     echo "" >&2
-    echo "    add FILE       Add a new dotfile" >&2
-    echo "    restore FILE   Restore the dotfile (untrack)" >&2
+    echo "    add FILE           Add a new dotfile" >&2
+    echo "    restore FILE       Restore the dotfile (untrack)" >&2
     echo "    install FILE|all   Install the dotfile (overwrite existing file)" >&2
+    echo "    git CMD            Run a git command inside of the storage" >&2
     echo "" >&2
     echo "FILE is always the path to the normal file, not a path to the storage." >&2
     echo "Any time a file is deleted/overwritten a backup is created right before (.bak)." >&2

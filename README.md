@@ -61,6 +61,11 @@ When you are on a new system and you want to install the dotfiles you tracked, y
 dotcmd install ~/.bashrc  # Reference the path where the file should be installed
 ```
 
+There is also an option to install all dotfiles (can be useful for a distro re-install).
+```shell
+dotcmd install all
+```
+
 
 ## Contributing
 
