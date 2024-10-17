@@ -219,7 +219,11 @@ df_install() {
 df_git() {
     log_msg "Entering $dfdir to run git."
     pushd "$dfdir" > /dev/null
-    git "$@"
+    if git "$@"; then
+        log_ok "git $*"
+    else
+        log_err "git $*"
+    fi
     popd > /dev/null
     log_msg Leaving storage directory.
 }
